@@ -1,0 +1,10 @@
+VERSION:3 SOURCE_TIMESTAMP:40C129EC
+NODE:I LEVEL:0 LINE:1 "C:\cvavr2\inc\mega16.h"
+NODE:I LEVEL:0 LINE:2 "C:\cvavr2\inc\delay.h"
+NODE:I LEVEL:0 LINE:3 "C:\cvavr2\inc\stdlib.h"
+NODE:I LEVEL:0 LINE:7 "C:\cvavr2\inc\lcd.h"
+NODE:F LEVEL:0 LINE:9 "lcd_set(void)"
+NODE:F LEVEL:0 LINE:14 "lcd_text(flash unsigned char * str)"
+NODE:F LEVEL:0 LINE:21 "lcd_number(int num)"
+NODE:F LEVEL:0 LINE:28 "lcd_reset(void)"
+NODE:F LEVEL:0 LINE:33 "lcd_enter(void)"
