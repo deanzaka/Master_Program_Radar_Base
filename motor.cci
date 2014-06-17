@@ -1,6 +1,6 @@
-VERSION:3 SOURCE_TIMESTAMP:44D06A9C
+VERSION:3 SOURCE_TIMESTAMP:44D189D6
 NODE:I LEVEL:0 LINE:1 "C:\cvavreval\inc\mega16.h"
 NODE:I LEVEL:0 LINE:2 "C:\cvavreval\inc\delay.h"
-NODE:I LEVEL:0 LINE:3 "D:\Document\Work\Solusi247\Master Program\motor.h"
+NODE:I LEVEL:0 LINE:3 "D:\Document\Work\Solusi247\Master_Program_Radar_Base\motor.h"
 NODE:F LEVEL:0 LINE:4 "motor_set(void)"
-NODE:F LEVEL:0 LINE:45 "motor(unsigned char dir,unsigned int speed)"
+NODE:F LEVEL:0 LINE:41 "motor(unsigned char dir,unsigned int speed)"

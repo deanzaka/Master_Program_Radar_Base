@@ -1,6 +1,7 @@
 RAM Allocation
 Variable                                                          Address   Size
 --------------------------------------------------------------------------------
+_seed                                                             0x0200       4
 
 EEPROM Allocation
 Variable                                                          Address   Size
@@ -9,5 +10,3 @@ Variable                                                          Address   Size
 Register Allocation
 Variable                                                          Register  Size
 --------------------------------------------------------------------------------
-pwm                                                               R4,R5        2
-dir                                                               R7           1
