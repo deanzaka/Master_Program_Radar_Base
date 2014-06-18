@@ -1,7 +1,13 @@
 RAM Allocation
 Variable                                                          Address   Size
 --------------------------------------------------------------------------------
-_seed                                                             0x0200       4
+rx_buffer0                                                        0x0200      32
+tx_buffer0                                                        0x0220      32
+rx_buffer1                                                        0x0240      32
+tx_buffer1                                                        0x0260      32
+tx_rd_index1                                                      0x0280       1
+tx_counter1                                                       0x0281       1
+_seed                                                             0x0282       4
 
 EEPROM Allocation
 Variable                                                          Address   Size
@@ -10,3 +16,15 @@ Variable                                                          Address   Size
 Register Allocation
 Variable                                                          Register  Size
 --------------------------------------------------------------------------------
+rx_wr_index0                                                      R5           1
+rx_rd_index0                                                      R4           1
+rx_counter0                                                       R7           1
+rx_buffer_overflow0                                               R2.0      1bit
+tx_wr_index0                                                      R6           1
+tx_rd_index0                                                      R9           1
+tx_counter0                                                       R8           1
+rx_wr_index1                                                      R11          1
+rx_rd_index1                                                      R10          1
+rx_counter1                                                       R13          1
+rx_buffer_overflow1                                               R2.1      1bit
+tx_wr_index1                                                      R12          1
