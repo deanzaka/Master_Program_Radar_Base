@@ -1,4 +1,4 @@
-#include <mega16.h>
+#include <mega162.h>
 #include <delay.h>
 #include "motor.h"
 void motor_set()

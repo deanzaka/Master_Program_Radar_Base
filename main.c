@@ -6,8 +6,8 @@ Automatic Program Generator
 http://www.hpinfotech.com
 
 Project : Master Program Radar Base
-Version : 1.2
-Date    : 18/06/2014
+Version : 1.3
+Date    : 29/06/2014
 Author  : deanzaka
 Company : Solusi247
 Comments: 
@@ -22,9 +22,8 @@ Data Stack size         : 256
 *****************************************************/
 
 #include <mega162.h>
-#include <stdlib.h>
-#include <delay.h>
 #include <string.h>
+#include <delay.h>
 #include "motor.h"
 
 #ifndef RXB8
@@ -404,24 +403,24 @@ ETIMSK=0x00;
 // USART0 Receiver: On
 // USART0 Transmitter: On
 // USART0 Mode: Asynchronous
-// USART0 Baud Rate: 9600
+// USART0 Baud Rate: 57600
 UCSR0A=0x00;
 UCSR0B=0xD8;
 UCSR0C=0x86;
 UBRR0H=0x00;
-UBRR0L=0x47;
+UBRR0L=0x0B;
 
 // USART1 initialization
 // Communication Parameters: 8 Data, 1 Stop, No Parity
 // USART1 Receiver: On
 // USART1 Transmitter: On
 // USART1 Mode: Asynchronous
-// USART1 Baud Rate: 9600
+// USART1 Baud Rate: 57600
 UCSR1A=0x00;
 UCSR1B=0xD8;
 UCSR1C=0x86;
 UBRR1H=0x00;
-UBRR1L=0x47;
+UBRR1L=0x0B;
 
 // Analog Comparator initialization
 // Analog Comparator: Off
@@ -435,10 +434,13 @@ SPCR=0x00;
 // Global enable interrupts
 #asm("sei")
 
+motor_set();
 while (1)
       {
       // Place your code here
       if(rx_counter0) putchar1(getchar());
-      if(rx_counter1) putchar(getchar1());      
+      if(rx_counter1) putchar(getchar1());
+      
+      motor(CW, 800);      
       }
 }

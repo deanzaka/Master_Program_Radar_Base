@@ -7,7 +7,6 @@ rx_buffer1                                                        0x0240      32
 tx_buffer1                                                        0x0260      32
 tx_rd_index1                                                      0x0280       1
 tx_counter1                                                       0x0281       1
-_seed                                                             0x0282       4
 
 EEPROM Allocation
 Variable                                                          Address   Size
