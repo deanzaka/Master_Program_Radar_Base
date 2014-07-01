@@ -276,6 +276,9 @@ void printf1(char *st)
 #include <stdio.h>
 
 // Declare your global variables here
+char format[3];
+int i = 0;
+
 
 void main(void)
 {
@@ -437,9 +440,48 @@ SPCR=0x00;
 motor_set();
 while (1)
       {
-      // Place your code here
-      if(rx_counter0) putchar1(getchar());
-      if(rx_counter1) putchar(getchar1());
+      //interupt rx0 pertama
+      if(rx_counter0)
+      {
+        //cek apakah awal command
+        if(getchar() == '$')
+        {
+            //masuk sequence command
+            if(getchar() == 'H')
+            {
+                //command dari host
+                for(i = 0; i < 3; i++)
+                {
+                    //if(rx_counter0) {
+                    format[i] = getchar();
+                    //}   
+                }
+                if(strncmp(format, "HTC", 3) == 0) printf(" [isinya perintah HTC] ");
+                else if(strncmp(format, "HTD", 3) == 0) printf(" [isinya perintah HTD] ");
+                else if(strncmp(format, "BOD", 3) == 0) printf(" [isinya perintah BOD] ");
+                else if(strncmp(format, "RPM", 3) == 0) printf(" [isinya perintah RPM] ");
+                else if(strncmp(format, "ACP", 3) == 0) printf(" [isinya perintah ACP] ");
+                else if(strncmp(format, "ARP", 3) == 0) printf(" [isinya perintah ARP] ");
+                
+                else if(strncmp(format, "RST", 3) == 0) 
+                {
+                    //force reset with watchdogs timer
+                    #asm("cli")
+                    WDTCR=0x18;
+                    WDTCR=0x08;
+                    while(1);
+                }
+                
+                else if(strncmp(format, "ADS", 3) == 0) printf(" [isinya perintah ADS] ");
+                else if(strncmp(format, "EVE", 3) == 0) printf(" [isinya perintah EVE] ");
+                else if(strncmp(format, "VER", 3) == 0) printf(" [isinya perintah VER] ");
+                else if(strncmp(format, "CAL", 3) == 0) printf(" [isinya perintah CAL] ");
+                else printf(" [COMMAND ERROR] ");
+            }
+            else printf(" [IDENTIFIER ERROR] ");
+        }
+      }
+      //if(rx_counter1) putchar(getchar1());
       
       motor(CW, 800);      
       }

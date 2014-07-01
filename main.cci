@@ -1,4 +1,4 @@
-VERSION:3 SOURCE_TIMESTAMP:44DD6F38
+VERSION:3 SOURCE_TIMESTAMP:44DE5E6A
 NODE:I LEVEL:0 LINE:24 "C:\cvavreval\inc\mega162.h"
 NODE:I LEVEL:0 LINE:25 "C:\cvavreval\inc\string.h"
 NODE:I LEVEL:0 LINE:26 "C:\cvavreval\inc\delay.h"
@@ -43,4 +43,6 @@ NODE:F LEVEL:0 LINE:230 "usart1_tx_isr(void)"
 NODE:F LEVEL:0 LINE:244 "putchar1(unsigned char c)"
 NODE:F LEVEL:0 LINE:263 "printf1(unsigned char * st)"
 NODE:I LEVEL:0 LINE:276 "C:\cvavreval\inc\stdio.h"
-NODE:F LEVEL:0 LINE:280 "main(void)"
+NODE:V LEVEL:0 LINE:279 "format -> RAM:????"
+NODE:V LEVEL:0 LINE:280 "i -> RAM:????"
+NODE:F LEVEL:0 LINE:283 "main(void)"

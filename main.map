@@ -1,12 +1,14 @@
 RAM Allocation
 Variable                                                          Address   Size
 --------------------------------------------------------------------------------
-rx_buffer0                                                        0x0200      32
-tx_buffer0                                                        0x0220      32
-rx_buffer1                                                        0x0240      32
-tx_buffer1                                                        0x0260      32
-tx_rd_index1                                                      0x0280       1
-tx_counter1                                                       0x0281       1
+rx_buffer0                                                        0x022C      32
+tx_buffer0                                                        0x024C      32
+rx_buffer1                                                        0x026C      32
+tx_buffer1                                                        0x028C      32
+tx_rd_index1                                                      0x02AC       1
+tx_counter1                                                       0x02AD       1
+format                                                            0x02AE       3
+i                                                                 0x02B1       2
 
 EEPROM Allocation
 Variable                                                          Address   Size
