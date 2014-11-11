@@ -292,34 +292,18 @@ CLKPR=0x00;
 #pragma optsize+
 #endif
 
-// Input/Output Ports initialization
-// Port A initialization
-// Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
-// State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 PORTA=0x00;
 DDRA=0x00;
 
-// Port B initialization
-// Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
-// State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 PORTB=0x00;
 DDRB=0x00;
 
-// Port C initialization
-// Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
-// State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 PORTC=0x00;
-DDRC=0x00;
+DDRC=0xFF;
 
-// Port D initialization
-// Func7=In Func6=In Func5=In Func4=In Func3=In Func2=In Func1=In Func0=In 
-// State7=T State6=T State5=T State4=T State3=T State2=T State1=T State0=T 
 PORTD=0x00;
-DDRD=0x00;
+DDRD=0xFF;
 
-// Port E initialization
-// Func2=In Func1=In Func0=In 
-// State2=T State1=T State0=T 
 PORTE=0x00;
 DDRE=0x00;
 
@@ -331,29 +315,6 @@ DDRE=0x00;
 TCCR0=0x00;
 TCNT0=0x00;
 OCR0=0x00;
-
-// Timer/Counter 1 initialization
-// Clock source: System Clock
-// Clock value: Timer1 Stopped
-// Mode: Normal top=0xFFFF
-// OC1A output: Discon.
-// OC1B output: Discon.
-// Noise Canceler: Off
-// Input Capture on Falling Edge
-// Timer1 Overflow Interrupt: Off
-// Input Capture Interrupt: Off
-// Compare A Match Interrupt: Off
-// Compare B Match Interrupt: Off
-TCCR1A=0x00;
-TCCR1B=0x00;
-TCNT1H=0x00;
-TCNT1L=0x00;
-ICR1H=0x00;
-ICR1L=0x00;
-OCR1AH=0x00;
-OCR1AL=0x00;
-OCR1BH=0x00;
-OCR1BL=0x00;
 
 // Timer/Counter 2 initialization
 // Clock source: System Clock
@@ -436,13 +397,15 @@ SPCR=0x00;
 
 // Global enable interrupts
 #asm("sei")
-
+printf("Ini awal program");
 motor_set();
 while (1)
       {
+      /*
       //interupt rx0 pertama
       if(rx_counter0)
       {
+        
         //cek apakah awal command
         if(getchar() == '$')
         {
@@ -476,13 +439,14 @@ while (1)
                 else if(strncmp(format, "EVE", 3) == 0) printf(" [isinya perintah EVE] ");
                 else if(strncmp(format, "VER", 3) == 0) printf(" [isinya perintah VER] ");
                 else if(strncmp(format, "CAL", 3) == 0) printf(" [isinya perintah CAL] ");
-                else printf(" [COMMAND ERROR] ");
+                else printf("$DERR,CMD");
             }
-            else printf(" [IDENTIFIER ERROR] ");
+            else printf("$DERR,DEV");
         }
-      }
-      //if(rx_counter1) putchar(getchar1());
-      
-      motor(CW, 800);      
+      }                    ;
+      */
+      if(rx_counter1) putchar(getchar1());
+      if(rx_counter0) putchar1(getchar());
+      motor(CW, 1000);     
       }
 }

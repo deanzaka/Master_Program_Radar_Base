@@ -3,20 +3,18 @@
 #include "motor.h"
 void motor_set()
 {
- 
-
-PORTD.5 = 0;
-PORTD.6 = 0;
-PORTD.7 = 0;
-
 
 DDRD.5 = 1;
 DDRD.6 = 1;
 DDRD.7 = 1;
 
+PORTD.5 = 0;
+PORTD.6 = 0;
+PORTD.7 = 0;
+
 // Timer/Counter 1 initialization
 // Clock source: System Clock
-// Clock value: 11059,200 kHz
+// Clock value: 43,200 kHz
 // Mode: Fast PWM top=0x03FF
 // OC1A output: Non-Inv.
 // OC1B output: Non-Inv.
@@ -27,7 +25,7 @@ DDRD.7 = 1;
 // Compare A Match Interrupt: Off
 // Compare B Match Interrupt: Off
 TCCR1A=0xA3;
-TCCR1B=0x09;
+TCCR1B=0x0C;
 TCNT1H=0x00;
 TCNT1L=0x00;
 ICR1H=0x00;

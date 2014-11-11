@@ -1,5 +1,5 @@
 main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"main.c" LINE:283
-printf DSTACK_USAGE:10 DSTACK_LEVEL:10 FILE:"C:\cvavreval\lib\stdio.lib" LINE:1476
-_print DSTACK_USAGE:20 DSTACK_LEVEL:30 FILE:"C:\cvavreval\lib\stdio.lib" LINE:503
-strlen DSTACK_USAGE:2 DSTACK_LEVEL:32 FILE:"C:\cvavreval\lib\string.lib" LINE:1707
+printf DSTACK_USAGE:10 DSTACK_LEVEL:10 FILE:"C:\cvavr2\lib\stdio.lib" LINE:1476
+_print DSTACK_USAGE:20 DSTACK_LEVEL:30 FILE:"C:\cvavr2\lib\stdio.lib" LINE:503
+strlen DSTACK_USAGE:2 DSTACK_LEVEL:32 FILE:"C:\cvavr2\lib\string.lib" LINE:1706
 usart0_rx_isr DSTACK_USAGE:5 DSTACK_LEVEL:37 FILE:"main.c" LINE:77
